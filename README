@@ -1,0 +1,246 @@
+# 💰 Finance Dashboard Backend & Frontend
+
+A full-stack Finance Dashboard application with role-based access control, financial record management, and analytical dashboard insights.
+
+---
+Features
+
+### 🔐 1. User & Role Management
+
+* Register and login users securely
+* Role-based access:
+
+  * **Admin** → Full control (CRUD + user management)
+  * **Analyst** → View records + dashboard insights
+  * **Viewer** → Read-only access
+* Activate / deactivate users
+* Update user roles
+
+---
+
+### 💸 2. Financial Records Management
+
+* Add income & expense records
+* View all records
+* Update and delete records
+* Filter records by:
+
+  * Type (income/expense)
+  * Category
+  * Date
+
+---
+
+### 📊 3. Dashboard Summary
+
+* Total Income
+* Total Expenses
+* Net Balance
+* Category-wise breakdown
+* Monthly trends
+* Recent transactions
+
+---
+
+### 🔐 4. Authentication & Security
+
+* JWT-based authentication
+* Password hashing using bcrypt
+* Protected API routes
+* Role-based authorization middleware
+
+---
+
+### ⚙️ 5. Validation & Error Handling
+
+* Required field validation
+* Proper status codes (400, 401, 403, 500)
+* Error handling for invalid operations
+
+---
+
+### 💾 6. Data Persistence
+
+* MongoDB (Atlas)
+* Mongoose ODM for schema modeling
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB Atlas
+* Mongoose
+* JWT (jsonwebtoken)
+* bcryptjs
+
+### Frontend
+
+* React.js
+* Axios
+
+---
+
+## 📂 Project Structure
+
+```
+finance-dashboard-backend/
+│
+├── config/
+│   └── db.js
+│
+├── models/
+│   ├── User.js
+│   └── Record.js
+│
+├── controllers/
+│   ├── userController.js
+│   ├── recordController.js
+│   └── dashboardController.js
+│
+├── middleware/
+│   ├── authMiddleware.js
+│   └── roleMiddleware.js
+│
+├── routes/
+│   ├── userRoutes.js
+│   ├── recordRoutes.js
+│   └── dashboardRoutes.js
+│
+├── utils/
+│   └── errorHandler.js
+│
+├── app.js
+└── server.js
+└── finance-frontend/
+    └── src/
+    └── App.js
+    └── index.js
+    
+```
+
+## ⚙️ Setup Instructions
+
+### 🔹 1. Clone the repository
+
+```
+git clone <https://github.com/sugandha-a/finance-dashboard>
+cd finance-dashboard-backend
+```
+
+### 🔹 2. Install dependencies
+
+Backend:
+
+```
+npm install
+```
+
+Frontend:
+
+```
+cd finance-frontend
+npm install
+```
+
+---
+
+### 🔹 3. Configure Environment Variables
+
+Create `.env` file in backend:
+
+```
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+---
+
+### 🔹 4. Run the application
+
+Backend:
+
+```
+npm run dev
+```
+
+Frontend:
+
+```
+npm start
+```
+
+## 🔗 API Endpoints
+
+### 🔐 Auth
+
+* POST `/api/users/register`
+* POST `/api/users/login`
+
+### 👤 Users (Admin)
+
+* GET `/api/users`
+* PUT `/api/users/:id/role`
+* PUT `/api/users/:id/status`
+
+### 💰 Records
+
+* POST `/api/records`
+* GET `/api/records`
+* PUT `/api/records/:id`
+* DELETE `/api/records/:id`
+
+### 📊 Dashboard
+
+* GET `/api/dashboard`
+
+---
+
+## 🧪 Testing
+
+You can test APIs using:
+
+* Postman
+* Browser (for frontend)
+
+---
+
+## ✨ Optional Enhancements Implemented
+
+* JWT Authentication
+* Role-based access control
+* Filtering support
+* Dashboard analytics
+
+---
+
+## 📌 Future Improvements
+
+* Pagination
+* Search functionality
+* Graphical charts (Chart.js)
+* Notifications
+* Deployment (Render / Vercel)
+
+---
+
+## 👩‍💻 Author
+Sugandha Ghosh
+B.Tech CSE | Full Stack Developer (Beginner)
+
+---
+
+## 🎉 Conclusion
+
+This project demonstrates:
+
+* Backend architecture design
+* API development
+* Authentication & authorization
+* Data handling & validation
+* Full-stack integration
+
+---
